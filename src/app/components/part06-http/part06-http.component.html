@@ -1,0 +1,13 @@
+<H2>Http</H2>
+
+<button (click)="getDataFromServer()">Get data from server</button>
+<ul>
+  <li *ngFor="let item of state">
+    <span>{{ item.id }}</span>
+    <span>{{ item.title }}</span>
+    <span>{{ item.completed }}</span>
+  </li>
+</ul>
+
+<hr />
+<button (click)="sendDataToServer()">send data to server</button>

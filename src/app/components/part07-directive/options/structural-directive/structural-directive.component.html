@@ -1,0 +1,29 @@
+<h3>Structural directive</h3>
+
+<h4>*ngIf:</h4>
+<div *ngIf="exampleNgIf; else altpemplate">
+  <span>i am rulling by *ngIf!</span>
+</div>
+<button (click)="showExampleNgIf()">show example NgIf</button>
+<br />
+
+<ng-template #altpemplate>
+  <span> i am another one;)</span>
+</ng-template>
+<!-- without ELSE will no show any template -->
+
+<h4>*ngFor:</h4>
+<ul>
+  <li *ngFor="let item of array; let i = index">
+    <span>id: {{ i + 1 }} name: {{ item }}</span>
+  </li>
+</ul>
+
+<h4>ngSwitch</h4>
+<div [ngSwitch]="countNgSwitch">
+  <ng-template ngSwitchCase="1">first template</ng-template>
+  <ng-template ngSwitchCase="2">second template</ng-template>
+  <ng-template ngSwitchCase="3">third template</ng-template>
+  <ng-template ngSwitchDefault>default template</ng-template>
+  <button (click)="changeTemplate()">change template</button>
+</div>

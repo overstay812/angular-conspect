@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    text-decoration: none;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}
+.activeLink {
+  color: pink;
+}

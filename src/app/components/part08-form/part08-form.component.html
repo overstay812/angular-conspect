@@ -1,0 +1,43 @@
+<h2>Forms:</h2>
+
+<h3>Template-Driven forms:</h3>
+
+<div>
+  <form #signInForm="ngForm" (ngSubmit)="loginUser(signInForm)">
+    <div>
+      <input type="text" name="loginInput" id="login" ngModel />
+      <label for="login"> login </label>
+      <br />
+      <input type="password" name="passwordInput" id="pass" ngModel />
+      <label for="pass">password</label>
+      <br />
+      <input type="checkbox" id="check" name="checkRem" ngModel />
+      <label for="check"> remember me</label>
+      <br />
+      <button type="submit">sing in</button>
+    </div>
+  </form>
+</div>
+
+<h3>Reactive forms:</h3>
+<h4>formControl</h4>
+
+<div>
+  <input type="text" [formControl]="nameControl" /> name
+  <br />
+  <span>name: {{ nameValue }}</span>
+  <br />
+  <span>validation status: {{ nameStatus }} </span>
+  <br />
+  <button (click)="getName()">get name</button>
+</div>
+
+<!-- form group -->
+
+<h4>formGroup</h4>
+<section [formGroup]="fullNameControll">
+  <input type="text" formControlName="firstName" /> firstName
+  <input type="password" formControlName="lastName" /> lastName
+  <br />
+  <button (click)="getNamefromFormGroup()">get first name</button>
+</section>

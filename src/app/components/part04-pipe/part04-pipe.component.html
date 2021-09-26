@@ -1,0 +1,13 @@
+<h2>Pipe</h2>
+
+<span>{{ currentDate | date: "medium" }}</span>
+
+<div>
+  <h3>handmadePipeFilter:</h3>
+  <input type="text" [(ngModel)]="filterValue" /> filter
+  <u
+    ><li *ngFor="let item of array | handmadePipeFilter: filterValue">
+      <span>{{ item }}</span>
+    </li></u
+  >
+</div>

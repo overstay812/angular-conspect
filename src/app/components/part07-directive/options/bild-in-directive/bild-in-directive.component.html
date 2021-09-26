@@ -1,0 +1,21 @@
+<h3>Bild in directive</h3>
+
+<div>
+  <h4>ngClass:</h4>
+  <span [ngClass]="isExampleNgClass ? 'redColor' : ''"
+    >i am rulling by ngClass</span
+  >
+  <button (click)="exampleNgClassChange()">change color</button>
+</div>
+
+<div>
+  <h4>ngStyle:</h4>
+  <span [ngStyle]="isExampleNgStyle">i am rulling by ngStyle</span>
+  <button (click)="exampleNgStyleChange()">change color</button>
+</div>
+
+<div>
+  <h4>[(ngModel)]:</h4>
+  <input type="text" [(ngModel)]="ngModelValue" placeholder="hello" />
+  <span>{{ ngModelValue }}</span>
+</div>

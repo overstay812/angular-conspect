@@ -1,0 +1,12 @@
+<div>
+  <h2>Routing:</h2>
+  <a routerLink="users" [queryParams]="{ q: 123 }">Users</a>
+  <a [routerLink]="['user', userId]">User with id</a>
+  <a routerLink="hooks">hooks/guards</a>
+  <div>
+    <a [routerLink]="[{ outlets: { popup: 'popup' } }]">open popup</a>
+    <a [routerLink]="[{ outlets: { popup: null } }]">close popup</a>
+  </div>
+</div>
+<router-outlet></router-outlet>
+<router-outlet name="popup"></router-outlet>

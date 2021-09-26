@@ -1,0 +1,16 @@
+<h2>Ng-content and ng-container:</h2>
+
+<h3>ng-content</h3>
+
+<app-child11 *ngFor="let item of users">
+  <span class="user">component: {{ item.id }}, name: {{ item.name }}</span>
+</app-child11>
+
+<h3>ng-container</h3>
+
+<ng-container *ngIf="!isHide">
+  <div *ngFor="let item of users">
+    <span>{{ item.name }}</span>
+  </div>
+</ng-container>
+<button (click)="hideComponent()">{{ isHide ? "show" : "hide" }}</button>

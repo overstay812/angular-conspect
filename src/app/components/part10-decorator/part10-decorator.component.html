@@ -1,0 +1,28 @@
+<h2>Decorator:</h2>
+
+<h3>@ViewChild</h3>
+
+<span #exampleViewChild> i am collored by @ViewChild</span>
+
+<h3>@ViewChildren</h3>
+
+<p #exampleViewChildren>i am collored by @ViewChildren 1</p>
+<p #exampleViewChildren>i am collored by @ViewChildren 2</p>
+<p #exampleViewChildren>i am collored by @ViewChildren 3</p>
+
+<!-- <app-child-example #myChild></app-child-example>
+<app-child-example #myChild></app-child-example>
+<app-child-example #myChild></app-child-example> -->
+
+<h3>@ContentChild</h3>
+<app-child-example #myChild>
+  <p class="greetengs" #greet>i am collored by @ContentChild</p>
+</app-child-example>
+
+<h3>@ContentChildren</h3>
+<app-child-example #myChild>
+  <h5 class="greetengs" #greet>i am collored by @ContentChild</h5>
+  <p class="greetengsChildren" #cont>i am collored by @ContentChildren 1</p>
+  <p class="greetengsChildren" #cont>i am collored by @ContentChildren 2</p>
+  <p class="greetengsChildren" #cont>i am collored by @ContentChildren 3</p>
+</app-child-example>
